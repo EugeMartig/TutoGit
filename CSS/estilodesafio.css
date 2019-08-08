@@ -1,0 +1,54 @@
+body {margin: 0px; paddin:0px; font-family: roboto;}
+header {
+	background-color: #2cc980;
+	padding: top;
+	text-align: center; /*para centrar el logo*/
+}
+
+h1 {margin: 0 0 20px; text-align: center;}
+header h1 {transition: all 3s;}
+header h1:hover {
+	background-color: #8ae7ea;
+	color: white;
+	padding: 25px 0;
+}
+
+h2 {text-align: right; color: white; padding: 1em; text-transform: capitalize;}
+h2 span {color:red;}
+h3 {color:white; padding: 15px; font-weight: bold; margin: 0px;}
+
+.bg-yellow {background-color: yellow;}
+.bg-white {background-color: white;}
+.bg-red {background-color: red;}
+.bg-aqua {background-color: aqua;}
+.bg-navy {background-color: navy;}
+.bg3-red {background-color: red;}
+.bg3-blue {background-color: blue;}
+.bg3-green {background-color: green;}
+
+.columna1, .columna2, .columna3 {float: left; max-width: 30%; padding: 0 1em;}
+.columna2{
+	border-left: dotted 4px red; 
+	border-right: dotted 4px blue;
+}
+
+.cabecera {
+	background: url("../img/drwho02.jpg"); background-size: contain;
+}
+
+.clearfix {clear: both;}
+
+#autores {background:url("../img/drwho01.jpg");padding: 2em;}
+#autores main {margin:0 auto; width: 90%; padding-bottom: 1em;}
+
+
+
+footer {
+	background-color: red;
+	background: linear-gradient(to left, red, blue, green, yellow);
+	text-align:center;
+	font-size: 2em;
+	color: white;
+	padding: 20px;
+}
+

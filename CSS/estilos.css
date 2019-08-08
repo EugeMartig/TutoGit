@@ -1,0 +1,132 @@
+body {background-color: aqua;
+font-family: roboto;
+}
+h1 {text-align: center; border-bottom: solid 2px black;padding: 0 0 20px 0;}
+h2 {text-align: center; background-color: black; color: grey; padding: 20px 0; margin: 100px;}
+div {width: 150px; height: 150px; background-color: red;}
+section {padding: 0 4em;}
+
+
+/*Gradiantes lineales */
+.linear-g{
+	background: linear-gradient(-180deg,red,orange);
+}
+
+.linear-g-b {
+	background: linear-gradient(to left bottom, blue, red, indigo);
+}
+
+.linear-g-c {
+	background:linear-gradient(to right, red 50%, green 50%);
+}
+
+.linear-g-d {
+	background:linear-gradient(to left,rgba(255,0,0,0.3), rgba(255,0,0,1));
+}
+
+.linear-repeat {
+	background:repeating-linear-gradient(to top,red,yellow 10%,green 20%);
+}
+
+/*Gradiantes radiales */
+/*-
+-mz- (parametro a agregar antes que background para que sea compatible con Chrome viejo)
+-webkit- (parametro a agregar antes que background para que sea compatible con safari viejo)
+*/
+
+.rad-g {
+	background: radial-gradient(indigo, yellow);
+	width: 200px;
+}
+
+.rad-g-b {
+	background: radial-gradient(circle, red, orange, green, yellow);
+	width: 300px;
+}
+
+.rad-repeating {
+	background: repeating-radial-gradient(pink,orange, red);
+}
+
+/*Transformaciones*/
+
+#transformaciones div{width: 200px; height: 200px; background: pink;}
+.t-rotar {
+	transform: rotate(-45deg);
+}
+
+.t-mover {
+	transform: translate(300px, 50px);
+}
+
+#transformaciones div.t-escala{width: 200px; height: 100px; background: yellow; margin-bottom: 150px;}
+.t-escala {
+	position: relative;
+	transform: scale(2, 3);
+	top: 200px;
+	left: 300px;
+}
+
+#transformaciones div.t-sesgar{width: 200px; height: 100px; background: blue;}
+.t-sesgar {
+	transform: skew(20deg, 10deg); background-color: blue;
+}
+
+/*Transiciones*/
+
+#transiciones div{width: 150px; height: 150px; background: orange;}
+
+#transiciones .trans {
+	transition: all 3s; /*Siempre se usa esto para que se transicionen todos los parametros que se mencionen a continuacion*/
+	transition-delay: 0.5s;
+	cursor: pointer;
+	transition-timing-function: ease-out; /*Para que la velocidad de animacion se acelere al principio y despues más lento*/
+
+	/* transition-timing-function: ease-in; Para que la velocidad de animacion se acelere al final*/
+	/* transition-timing-function: linear; Para que la velocidad de animacion sea siempre igual*/
+}
+
+#transiciones .trans:hover{
+	width: 600px;
+	background-color: navy;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+/*Aca hacemos la animacion*/
+
+@keyframes ejemplo-a {
+	from {background:red;}
+	to {background: green;}
+}
+
+
+/*Aca le decimos a que elemento le aplicamos la animacion*/
+#animaciones .anima-a {
+	animation-name: ejemplo-a;
+	animation-duration:4s;
+	animation-delay:3s;
+	width:200px;
+	height:200px;
+}
+
+@keyframes ejemplo-b {
+	0% {top:0px;left:0px;}
+	25% {top:0px;left:300px;}
+	50% {top:300px;left:300px;}
+	75% {top:300px;lef:0px;}
+	100% {top:0px;left:0px;}
+}
+
+#animaciones .anima-b {
+	position: relative; /*elemento importante*/
+	animation-name: ejemplo-b; /*elemento importante*/
+	animation-duration: 3s;
+	width: 150px;
+	height: 150px;
+	background-color: purple;
+	animation-iteration-count: 6; /*animation-iteration-count: infinite; Para que no deje de moverse.*/
+	animation-direction: alternate; /*Para que se mueva en el sentido seteado y en reversa (uno y uno)*/
+
+
+}

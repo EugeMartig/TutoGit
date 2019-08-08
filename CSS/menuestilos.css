@@ -1,0 +1,40 @@
+.navbar {
+	background-color: black;
+	overflow: hidden; /*Para que el background ocupe todo el alto de los botones , esto + float: left de abajo */;
+}
+.navbar a {
+	float: left; 
+	text-decoration: none;
+	font-size: 1em;
+	font-family: roboto;
+	color: white;
+	background-color: black;
+	padding: 15px 98px;
+}
+
+.navbar a:hover {background-color: #2bcc9c; color: #333;}
+
+.desplegable {overflow: hidden; float: left;}
+
+.desplegable .btn {
+font-size: 1em;
+font-family: roboto;
+color: white;
+background-color: black;
+padding: 15px 97px;
+border: 0;
+}
+
+.desplegable .btn:hover {background-color: #2bcc9c; color: #333;}
+
+.submenu {
+	display: none; /*Para que no se vea a priori los accesos del submenu*/
+	position: absolute; 
+	min-height: 140px; /*Tamaño del desplegable*/
+	z-index: 2;
+} 
+
+.submenu a {float: none; /*Para que el submenu este en forma vertical uno abajo del otro*/
+display: block;
+	} 
+.desplegable:hover .submenu {display: block;} /*Para que aparezca nuevamente el menu*/
