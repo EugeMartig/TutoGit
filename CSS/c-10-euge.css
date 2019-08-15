@@ -1,0 +1,84 @@
+h1, h2, h3 {color: white; font-family: roboto;}
+/*PROPIEDADES GRID CONTAINER*/
+/*grid-template-column*/
+
+.g-cont {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%; /*Define la cantidad de columnas y su ancho*/
+	grid-template-columns: repeat(3, auto); /*shorthand para tamaño de columnas poniendolas en auto */
+	background: pink;
+}
+
+.g-cont div {
+	background: orange; border: solid 1px white;
+	padding: 1.5em;
+	text-align: center;
+}
+
+/*Propiedad grid template-row*/
+
+.g-cont2 {
+	display: grid;
+	grid-template-columns: repeat(3, auto); /*shorthand para tamaño de columnas poniendolas en auto */
+	grid-template-rows: 50px 100px 200px;
+	background: pink;
+}
+
+.g-cont2 div {
+	background: teal; border: solid 1px white;
+	padding: 1.5em;
+	text-align: center;
+}
+
+
+/*PROPIEDADES GRID COLUMN-GAP // GRID-ROW-GAP*/
+
+.g-cont3 {
+	display: grid;
+	grid-template-columns: repeat(3, auto); /*shorthand para tamaño de columnas poniendolas en auto */
+	grid-template-rows: repeat(3,150px);
+	grid-column-gap: 1em; /*Define margin entre items o columnas*/
+	grid-row-gap: 1em; /*Define espacio o margin entre las filas*/
+	/*grid-gap: 2em; propiedad shorthand de column gap y row gap*/
+	background: yellow;
+}
+
+.g-cont3 div {
+	background: #52cb6a; border: solid 1px white;
+	padding: 1.5em;
+	text-align: center;
+}
+
+/*PROPIEDADES JUSTIFY-CONTENT*/
+
+.g-cont4 {
+	display: grid;
+	grid-template-columns: repeat(3, 200px); /*shorthand para tamaño de columnas poniendolas en auto */
+	grid-template-rows: repeat(3,150px);
+	justify-content: end; /*Acepta los mismos parametros de flex-box, start, center, end, space-between, space-around*/
+	align-content: end;
+	background: violet;
+
+	height: 600px;
+}
+
+.g-cont4 div {
+	background: pink; border: solid 1px white;
+	padding: 1.5em;
+	text-align: center;
+}
+
+
+
+
+/*MEDIA QUERYS*/
+
+body {background-color: blue;}
+
+@media screen and (min-width: 800px){
+	body {background-color: teal;}
+}
+
+@media screen and (min-width: 1000px){
+	body {background-color: black;}
+}
