@@ -1,4 +1,5 @@
 h1, h2, h3 {color: white; font-family: roboto;}
+
 /*PROPIEDADES GRID CONTAINER*/
 /*grid-template-column*/
 
@@ -68,12 +69,74 @@ h1, h2, h3 {color: white; font-family: roboto;}
 	text-align: center;
 }
 
+/*PROPIEDADES GRID-ITEMS*/
+/*Grid column-start /end/ */
 
+.g-item {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(3,150px);
+	background: red;
+}
+
+.g-item div {
+	background: #990000; border: solid 1px white;
+	padding: 1.5em;
+	text-align: center;
+	color: white;
+}
+
+
+.g-item div.item1 {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	color: yellow;
+	font-size: 2em;
+}
+
+.g-item div.item5 {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	/*grid-column: 1/3Propiedad shorthand de gid.column-start +gid column-end*/
+	color: yellow;
+	font-size: 2em;
+}
+
+
+.g-item2 {
+	display: grid;
+	grid-template-columns: repeat(4,auto);
+	grid-template-rows: repeat(3,150px);
+	background-color: green;
+}
+
+.g-item2 div {
+background-color: green; border: solid 1px black;
+padding: 1.5em;
+text-align: center;
+}
+
+.g-item2 div.item3 {
+grid-row-start: 1;
+grid-row-end: 5;
+color: orange;
+font-size: 2em;
+}
+
+.g-item2 div.item4 {
+grid-row: 2/4;
+color: orange;
+font-size: 2em;
+}
 
 
 /*MEDIA QUERYS*/
-
 body {background-color: blue;}
+
+@media screen and (max-width: 800px){
+	body {background-color: teal;}
+	.g-cont {grid-template-columns: auto auto;}
+}
 
 @media screen and (min-width: 800px){
 	body {background-color: teal;}
